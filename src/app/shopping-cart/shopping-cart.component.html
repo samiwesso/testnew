@@ -1,0 +1,66 @@
+<app-navigation></app-navigation>
+<div class="container">
+    <table id="cart" class="table table-hover table-condensed">
+      <thead>
+        <tr>
+          <th style="width:50%">Product</th>
+          <th style="width:10%">Price</th>
+          <th style="width:8%">Quantity</th>
+          <th style="width:22%" class="text-center"></th>
+          <th style="width:10%"></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let item of items">
+          <td data-th="Product">
+            <div class="row">
+              <div class="col-sm-2 hidden-xs">
+                <img
+                  src="{{ item.product.img }}"
+                  alt="..."
+                  class="img-responsive"
+                />
+              </div>
+              <div class="col-sm-10 d-none d-sm-block">
+                <h4 class="nomargin">{{ item.product.name }}</h4>
+              </div>
+            </div>
+          </td>
+          <td data-th="Price">${{ item.product.price }}</td>
+          <td data-th="Quantity">
+            <input type="number" class="form-control text-center" value="{{ item.quantity }}" />
+          </td>
+          <td data-th="Subtotal" class="text-center">${{ item.product.price*item.quantity }}</td>
+          <td class="actions" data-th="">
+            <button (click)="remove(item.product.id)" class="btn btn-sm">
+              <i class="far fa-times-circle"></i>
+            </button>
+          </td>
+        </tr>
+
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td>
+            <a routerLink="/products" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}" class="btn btn-warning"
+              ><i class="fa fa-angle-left"></i> Back</a>
+          </td>
+          <td colspan="2" class="hidden-xs"></td>
+          <td class="hidden-xs text-center"><strong>Total ${{ total }}</strong></td>
+
+          <td class="hidden-xs text-center"><strong>total{{ numTotal }}</strong></td>
+          <td>
+            <a routerLink="/checkout" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}" class="btn btn-success btn-block">Checkout</a>
+          </td>
+        </tr>
+      </tfoot>
+      
+    </table>
+  </div>
+
+  <app-footer></app-footer>
+  

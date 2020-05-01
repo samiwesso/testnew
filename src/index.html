@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Projekt Webb</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <script src="https://kit.fontawesome.com/202432a3bf.js"></script>
+
+
+</head>
+<body>
+  <app-root></app-root>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+  <script>
+    $(window).on("load", function () {
+
+      $("#news-slider2").owlCarousel({
+        items: 3,
+        itemsDesktop: [1199, 2],
+        itemsDesktopSmall: [980, 2],
+        itemsMobile: [600, 1],
+        pagination: true,
+        navigationText: false,
+        autoPlay: true
+      });
+
+    });
+
+    $(document).on("turbolinks:load", function () {
+      $("#news-slider2").owlCarousel();
+    })
+
+    $(document).on('turbolinks:before-cache', function () {
+      $("#news-slider2").owlCarousel('destroy');
+    });
+  </script>
+</body>
+
+</html>

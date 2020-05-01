@@ -1,0 +1,122 @@
+@import "../colors";
+
+#profile-section {
+  box-sizing: border-box;
+  padding-bottom: 30px;
+
+  .profile-header {
+    background: url(../../assets/images/dark-background.jpg);
+    background-size: cover;
+    height: 150px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    position: relative;
+
+    .user-img {
+      position: absolute;
+      background: $light-gray;
+      color: $white;
+      width: 100%;
+      max-width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      bottom: -50%;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+      h1 {
+        transform: translate(0, 15%);
+        font-size: 4.5rem;
+      }
+    }
+  }
+
+  .user-title {
+    padding-top: 30px;
+    h5,
+    p {
+      font-weight: 400;
+      letter-spacing: 3px;
+    }
+  }
+
+  .profile-tabs {
+    .nav-link {
+      letter-spacing: 2px;
+      font-weight: 400;
+      background: #404040;
+      color: white;
+      border: 1px solid $dark-gray;
+      border-radius: 0;
+      transition: ease-in-out 0.1s;
+    }
+    .nav-link:hover {
+      border: 1px solid $white;
+      background: $light-gray;
+      color: $white;
+    }
+
+    .overview-section {
+      th {
+        font-weight: 400;
+        letter-spacing: 2px;
+
+        button {
+          background: #404040;
+          border: 1px solid $dark-gray;
+          color: white;
+          font-size: 1.1rem;
+          font-weight: 400;
+          letter-spacing: 4px;
+          padding: 7px 20px;
+          transition: ease-in-out 0.1s;
+        }
+        button:hover {
+          border: 1px solid $white;
+          background: $light-gray;
+          color: $white;
+        }
+      }
+      td {
+        .overview-input {
+          background: transparent;
+          border: none;
+          padding: 3px 0px;
+          padding-left: 5px;
+        }
+      }
+      .cog {
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+        color: $dark-gray;
+        transition: ease-in-out 0.1s;
+        cursor: pointer;
+      }
+      .cog:hover {
+        transform: scale(1.1);
+        color: $light-gray;
+      }
+    }
+  }
+}
+.more-info a,
+.more-info i {
+  color: #404040;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+tr.collapse.in {
+  display: table-row;
+}
+
+[aria-expanded="false"] > .expanded,
+[aria-expanded="true"] > .collapsed {
+  display: none;
+}
+
+
+@media (max-width: 575.98px) {
+    .info-btn {
+      display:none;
+    }
+  }

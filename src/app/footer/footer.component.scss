@@ -1,0 +1,55 @@
+@import '../colors';
+
+#footer-section {
+    background: $white;
+    .row {
+        margin: 0;
+    }
+    /* Social media */
+    .link {
+        position: relative;
+        text-decoration: none;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+
+        background: $dark-gray;
+        color: $white;
+        transition: ease-in-out .1s;
+
+        .social-link {
+            position: absolute;
+            top: 33%;
+        }
+    }
+    .link:hover {
+        background: $light-gray;
+    }
+
+    /* Footer lists */
+   
+    .footer-list {
+        list-style: none;
+        margin-top: 10px;
+        
+        h5 {
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+        li {
+            margin-bottom: 7px;  
+            transition: ease-in-out .1s; 
+            cursor: pointer; 
+        }
+        li:hover {
+            transform: translate(3px, 0);
+        }
+
+        p {
+            padding: 0;
+            margin: 3px 0px;
+        }
+        
+    }
+
+}

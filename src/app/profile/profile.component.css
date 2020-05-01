@@ -1,0 +1,129 @@
+#profile-section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 30px;
+}
+
+#profile-section .profile-header {
+  background: url(../../assets/images/dark-background.jpg);
+  background-size: cover;
+  height: 150px;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+#profile-section .profile-header .user-img {
+  position: absolute;
+  background: #aaaaaa;
+  color: #f0f0f0;
+  width: 100%;
+  max-width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  bottom: -50%;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#profile-section .profile-header .user-img h1 {
+  -webkit-transform: translate(0, 15%);
+          transform: translate(0, 15%);
+  font-size: 4.5rem;
+}
+
+#profile-section .user-title {
+  padding-top: 30px;
+}
+
+#profile-section .user-title h5,
+#profile-section .user-title p {
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+#profile-section .profile-tabs .nav-link {
+  letter-spacing: 2px;
+  font-weight: 400;
+  background: #404040;
+  color: white;
+  border: 1px solid #263238;
+  border-radius: 0;
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+#profile-section .profile-tabs .nav-link:hover {
+  border: 1px solid #f0f0f0;
+  background: #aaaaaa;
+  color: #f0f0f0;
+}
+
+#profile-section .profile-tabs .overview-section th {
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+#profile-section .profile-tabs .overview-section th button {
+  background: #404040;
+  border: 1px solid #263238;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  padding: 7px 20px;
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+#profile-section .profile-tabs .overview-section th button:hover {
+  border: 1px solid #f0f0f0;
+  background: #aaaaaa;
+  color: #f0f0f0;
+}
+
+#profile-section .profile-tabs .overview-section td .overview-input {
+  background: transparent;
+  border: none;
+  padding: 3px 0px;
+  padding-left: 5px;
+}
+
+#profile-section .profile-tabs .overview-section .cog {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  color: #263238;
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+  cursor: pointer;
+}
+
+#profile-section .profile-tabs .overview-section .cog:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #aaaaaa;
+}
+
+.more-info a,
+.more-info i {
+  color: #404040;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+tr.collapse.in {
+  display: table-row;
+}
+
+[aria-expanded="false"] > .expanded,
+[aria-expanded="true"] > .collapsed {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .info-btn {
+    display: none;
+  }
+}
+/*# sourceMappingURL=profile.component.css.map */

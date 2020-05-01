@@ -1,0 +1,22 @@
+
+   <!-- <div>{{product.name}}</div> <button (click)="addProductToCart(product)">+</button>
+   <div>{{product.price.toLocaleString('en-US', {style: 'currency', currency: 'USD'})}}</div> -->
+
+   <div class="container products">
+    <div class="row">
+
+        <div class="product-image2">
+            <a routerLink="/product-info">
+                <!-- <img class="pic-1" src="{{ product.img }}">
+                 -->
+            </a>
+            <a class="add-to-cart" [routerLink]="[ { id:product.id }]"><button (click)="addProductToCart(product)">Add to cart</button></a>
+        </div>
+        <div class="product-content">
+            <h3 class="title"><a href="#">{{ product.name }}</a></h3>
+            <span class="price">${{ product.price }}</span>
+       
+        </div>
+    </div>
+</div>
+   

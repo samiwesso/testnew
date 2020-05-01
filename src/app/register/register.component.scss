@@ -1,0 +1,79 @@
+@import "../../colors";
+
+//  background-color: $dark-gray;
+//        color: $white;
+//$light-gray: rgb(170, 170, 170);
+/*  #register {
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+  }
+  
+  .register {
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
+    -webkit-transform: rotateY(10deg);
+    -moz-transform: rotateY(10deg);
+    transform: rotateY(3deg);
+  
+  }
+  
+  .register:hover {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0);
+  } */
+.fpad {
+  padding-left: 50px;
+}
+.container {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+input {
+  font-size: 16px;
+}
+
+.input-group-addon {
+  width: 40px;
+  background-color: #404040;
+  color: white;
+  border: 0 !important;  
+  padding: 5px;
+  
+}
+
+.validate {
+  padding: 0px 0px 5px 10px;
+}
+
+::placeholder {
+  color: #40404086;  
+  font-size: 16px;
+}
+#inner-wrapper,
+#contact-us .contact-form,
+#contact-us .our-address {
+  background-color: #4040400e !important;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  padding: 50px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+.btn {
+  border-radius: 0;
+  border: 1px solid $white;
+  color: $white;
+  background-color: #404040;
+  font-weight: 600;
+}
+
+.btn:hover {
+  border: 1px solid $light-gray;
+  background-color: #7a7a7a;
+  text-decoration: none;
+}

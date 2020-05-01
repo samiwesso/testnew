@@ -1,0 +1,22 @@
+@import '../../colors';
+
+.panel a {
+  color:black;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.panel a:hover {
+  color: #7a7a7a;
+}
+
+.panel-heading a{
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
+[aria-expanded="false"]>.expanded,
+[aria-expanded="true"]>.collapsed {
+  display: none;
+}

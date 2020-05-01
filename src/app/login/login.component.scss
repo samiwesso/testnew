@@ -1,0 +1,109 @@
+@import "../../colors";
+
+.container {
+  height: 100%;
+  align-content: center;
+}
+
+.card {
+  height: 370px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: #4040400e !important;
+  border-radius: 0;
+}
+
+.social_icon span {
+  font-size: 60px;
+  margin-left: 10px;
+  color: #505050;
+}
+
+.social_icon span:hover {
+  color: #7a7a7a;
+  cursor: pointer;
+}
+
+.card-header h3 {
+  color: black;
+}
+
+.social_icon {
+  position: absolute;
+  right: 20px;
+  top: -45px;
+}
+
+.input-group-prepend span {
+  width: 40px;
+  background-color: #404040;
+  color: white;
+  border: 0 !important;
+  border-radius: 0;
+}
+
+input:focus {
+  outline: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+  color: black;
+}
+
+.remember input {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.links {
+  color: black;
+}
+
+.links a {
+  color: #000000;
+  margin-left: 4px;
+}
+
+.links a:hover {
+    color: #c5c5c5;
+    margin-left: 4px;
+  }
+
+.btn {
+  border-radius: 0;
+  border: 1px solid $white;
+  color: $white;
+  background-color: #404040;
+  font-weight: 600;
+}
+
+.btn:hover {
+  border: 1px solid $light-gray;
+  background-color: #7a7a7a;
+  text-decoration: none;
+}
+
+input {
+  border-radius: 0;
+}
+
+::placeholder {
+  color: #40404086;  
+  font-size: 16px;
+}
+
+.validate {
+  display:block;
+  padding: 0px 0px 0px 10px;
+  height: 40px;
+  width: 250px;
+}
+
+form {
+  margin: 5px 0px 0px 35px;
+  
+}

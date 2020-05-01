@@ -1,0 +1,174 @@
+<app-navigation></app-navigation>
+<div class="mt-5" id="profile-section">
+
+    <div class="container">
+        <div class="user-title">
+            <h5 class="pt-5">{{ user.firstname }} {{ user.lastname }}</h5>
+        </div>
+    </div>
+
+    <div class="profile-tabs container pt-2">
+
+        <div class="mt-3 d-block d-md-none">
+            <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#overview" role="tab"
+                    aria-controls="v-pills-home" aria-selected="true">Overview</a>
+
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#orders" role="tab"
+                    aria-controls="v-pills-messages" aria-selected="false">Orders</a>
+
+               
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-2 d-none d-md-block">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#overview" role="tab"
+                        aria-controls="v-pills-home" aria-selected="true">Overview</a>
+
+                    <a class="nav-link mt-2" id="v-pills-messages-tab" data-toggle="pill" href="#orders" role="tab"
+                        aria-controls="v-pills-messages" aria-selected="false">Orders</a>
+
+                </div>
+            </div>
+
+            <div class="col-1"></div>
+
+            <div class="col-sm-12 col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+
+                    <!-- Profile info -->
+                    <div class="tab-pane fade show active" id="overview" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab">
+                        <div class="overview-section overview-tabs">
+                            <table class="table">
+
+                                <tbody>
+
+                                    <tr>
+                                        <th scope="row">Email address</th>
+                                        <td><input type="text" id="email" class="overview-input"
+                                                value="{{ user.email }}"></td>
+                                        <td class="text-right d-none d-sm-block "> <label class="cog" for="email"><i
+                                                    class="fas fa-cog"></i></label></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">First name</th>
+                                        <td><input type="text" id="firstname" class="overview-input"
+                                                value="{{ user.firstname }}"></td>
+                                        <td class="text-right d-none d-sm-block"> <label class="cog" for="firstname"><i
+                                                    class="fas fa-cog"></i></label></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">Last name</th>
+                                        <td><input type="text" id="lastname" class="overview-input"
+                                                value="{{ user.lastname }}">
+                                        </td>
+                                        <td class="text-right d-none d-sm-block"> <label class="cog" for="lastname"><i
+                                                    class="fas fa-cog"></i></label></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">Addressline</th>
+                                        <td><input type="text" id="addressline" class="overview-input"
+                                                value="{{ user.addressline }}"></td>
+                                        <td class="text-right d-none d-sm-block"> <label class="cog"
+                                                for="addressline"><i class="fas fa-cog"></i></label></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">Zipcode</th>
+                                        <td><input type="text" id="zipcode" class="overview-input"
+                                                value="{{ user.zipcode }}">
+                                        </td>
+                                        <td class="text-right d-none d-sm-block"> <label class="cog" for="zipcode"><i
+                                                    class="fas fa-cog"></i></label></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">City</th>
+                                        <td><input type="text" id="city" class="overview-input" value="{{ user.city }}">
+                                        </td>
+                                        <td class="text-right d-none d-sm-block"> <label class="cog" for="city"><i
+                                                    class="fas fa-cog"></i></label></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row"><label for="password">Change password</label></th>
+                                        <td><input type="password" id="password" class="form-control" placeholder="">
+                                        </td>
+                                        <td class="text-right d-none d-sm-block"> <label class="cog" for="password"><i
+                                                    class="fas fa-cog"></i></label></td>
+                                    </tr>
+
+                                    <th>
+                                        <button class="btn-save mt-3">SAVE</button>
+
+                                    </th>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- Orders -->
+                    <div class="tab-pane fade pb-4" id="orders" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <div class="overview-section overview-tabs">
+
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Order number</th>
+                                        <th>Order Date</th>
+                                        <th>Order Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let issue of issues" data-toggle="collapse" data-target="#order-info">
+                                        <td class="order-number">{{ issue._id }}</td>
+                                        <td class="order-date">{{ issue.modified }}</td>
+                                        <td class="order-price"> kr</td>
+                                        <td class="more-info"><a href="#order-info" data-toggle="collapse" role="button"
+                                                aria-expanded="false" aria-controls="order-info">
+
+                                                <span class="collapsed">
+                                                    <span class="info-btn">More info </span><i
+                                                        class="fas fa-arrow-down"></i>
+                                                </span>
+                                                <span class="expanded">
+                                                    <span class="info-btn">Less info </span><i
+                                                        class="fas fa-arrow-up"></i>
+                                                </span>
+                                            </a></td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                            <div class="collapse" id="order-info">
+                                <div class="card card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                                    terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
+                                    labore wes anderson cred nesciunt sapiente ea proident.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+<app-footer></app-footer>

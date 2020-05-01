@@ -1,0 +1,188 @@
+<div class="container col-md-7 col-md-offset-4 pt-5 pb-3" id="register">
+	<section id="inner-wrapper" class="register mt-5 pt-5">
+		<article>
+		 <form  [formGroup]="registerForm" (ngSubmit)="register()"> 
+		
+			<div class="form-group row">
+				<div class="form-group col-md-5">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-user"> </i>
+						<input type="text" class="form-control" placeholder="firstname" id="firstname"
+							formControlName="firstname" type="text"
+							            [ngClass]="{ 'has-error' : isSubmitted && formControls.firstname.errors }" class="validate"></span>
+						<span class="helper-text">
+							<div *ngIf="isSubmitted && formControls.firstname.errors" class="text-danger">
+								<div *ngIf="formControls.firstname.errors.required">
+									First name address is required!
+								</div>
+							</div>
+						</span> 
+					</div>
+				</div>
+				<div class="form-group col-md-5">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-user"> </i>
+						<input type="text" class="form-control" placeholder="lastname"  id="lastname" formControlName="lastname" type="text"
+						 [ngClass]="{ 'has-error' : isSubmitted && formControls.lastname.errors }" class="validate"></span>
+						<span class="helper-text">
+						  <div *ngIf="isSubmitted && formControls.lastname.errors" class="text-danger">
+							<div *ngIf="formControls.lastname.errors.required">
+							  Last name address is required!
+							</div>
+						  </div>
+						</span> 
+					</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="form-group col-md-5">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-map-marker-alt"> </i>
+						<input type="text" class="form-control" placeholder="addressline" id="addressline" formControlName="addressline" type="text"
+						 [ngClass]="{ 'has-error' : isSubmitted && formControls.addressline.errors }" class="validate"></span>
+						<span class="helper-text">
+						  <div *ngIf="isSubmitted && formControls.addressline.errors" class="text-danger">
+							<div *ngIf="formControls.firstname.errors.required">
+							  Address is required!
+							</div>
+						  </div>
+						</span> 
+					</div>
+				</div>
+				<div class="form-group col-md-5">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-map-marker-alt"> </i>
+						<input type="text" class="form-control" placeholder="zipcode" id="zipcode" formControlName="zipcode" type="text"
+						 [ngClass]="{ 'has-error' : isSubmitted && formControls.zipcode.errors }" class="validate"></span>
+						<span class="helper-text">
+						  <div *ngIf="isSubmitted && formControls.zipcode.errors" class="text-danger">
+							<div *ngIf="formControls.zipcode.errors.required">
+							  zipcode is required!
+							</div>
+						  </div>
+						</span> 
+					</div>
+				</div>
+			</div>
+			<div class="form-group row ">
+					<div class="form-group col-md-5">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-map-marker-alt"> </i>
+								<input type="text" class="form-control" placeholder="city" id="city" formControlName="city" type="text"
+								 [ngClass]="{ 'has-error' : isSubmitted && formControls.city.errors }" class="validate"></span>
+								<span class="helper-text col-md-6">
+								  <div *ngIf="isSubmitted && formControls.city.errors" class="text-danger">
+									<div *ngIf="formControls.city.errors.required">
+									  city is required!
+									</div>
+								  </div>
+								</span> 
+							</div>
+						</div>
+				<div class="form-group col-md-5">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-map-marker-alt"> </i>
+						<input type="text" class="form-control" placeholder="country" id="country" formControlName="country" 
+						 [ngClass]="{ 'has-error' : isSubmitted && formControls.country.errors }" class="validate"></span>
+						<span class="helper-text">
+						  <div *ngIf="isSubmitted && formControls.country.errors" class="text-danger">
+							<div *ngIf="formControls.country.errors.required">
+							  Country is required!
+							</div>
+						  </div>
+						</span> 
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
+					<input type="email" class="form-control col-md-10" placeholder="Email Address" id="email" formControlName="email" >
+					<span class="helper-text col-md-12">
+					  <div *ngIf="isSubmitted && formControls.email.errors" class="text-danger">
+						<div *ngIf="formControls.email.errors.required">
+						  Email address is required!
+						</div>
+					  </div>
+					</span> 
+				</div>
+			</div>
+			<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
+						<input type="password" class="form-control col-md-10" placeholder="password" id="password" formControlName="password" >
+						<span class="helper-text col-md-12">
+						  <div *ngIf="isSubmitted && formControls.password.errors" class="text-danger">
+							<div  *ngIf="formControls.password.errors.required">
+							  password is required!
+							</div>
+						  </div>
+						</span> 
+					</div>
+				</div>
+			<input class="btn btn-success btn-block col-md-2 float-right" type="submit" value="Register">
+			</form>
+		</article>
+	</section>
+</div>
+
+
+
+
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent implements OnInit {
+
+  constructor(private authService: AuthService, private router: Router, private formBuilder: FormBuilder) { }
+
+  registerForm: FormGroup;
+  isSubmitted: boolean = false;
+
+
+  ngOnInit() {
+    this.registerForm = this.formBuilder.group({
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
+      addressline: ['', Validators.required],
+      zipcode: ['', Validators.required],
+      city: ['', Validators.required],
+      country: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required]
+    })
+  }
+
+
+  
+  get formControls() { return this.registerForm.controls }
+
+
+  register() {
+    this.isSubmitted = true;
+
+    if(this.registerForm.invalid) {
+      return;
+    }
+
+    this.authService.register(this.registerForm.value).subscribe((registerres) => {
+      if(registerres["success"]) {
+        this.authService.login(this.registerForm.value).subscribe((loginres) => {
+          if(loginres["success"]) {
+            this.router.navigateByUrl('/login');
+          }
+          else {
+            this.router.navigateByUrl('/register');
+          }         
+        })        
+      }    
+    })
+  }
+}

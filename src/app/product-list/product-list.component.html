@@ -1,0 +1,10 @@
+<app-navigation></app-navigation>
+<div class="container products">
+  <h1 class="h1 m-5 text-center">Våra Skor</h1> <hr>
+  <div class="row">
+      <product  *ngFor="let product of products" [product]="product" (productAdded)="addProductToCart($event)" class="col-md-3 col-sm-6">
+         
+      </product>
+</div> <hr>
+</div>
+<app-footer></app-footer>

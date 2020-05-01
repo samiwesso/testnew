@@ -1,0 +1,28 @@
+img {
+  width: 50px;
+}
+
+.container {
+  margin-top: 150px;
+}
+
+.btn {
+  border-radius: 0;
+  border: 1px solid #f0f0f0;
+  color: #f0f0f0;
+  background-color: #404040;
+  font-weight: 600;
+}
+
+.btn:hover {
+  border: 1px solid #aaaaaa;
+  background-color: #7a7a7a;
+  text-decoration: none;
+}
+
+@media (max-width: 575.98px) {
+  a i {
+    display: none;
+  }
+}
+/*# sourceMappingURL=shopping-cart.component.css.map */

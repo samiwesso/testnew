@@ -1,0 +1,35 @@
+@import "../../colors";
+
+.phoneimg {
+  background-image: url(../../assets/iphone-11-pro-max-midnight-green-select-2019.png);
+  height: 556px;
+  width: 460px;
+  background-repeat: no-repeat;
+}
+
+
+.buy-btn {
+  border-radius: 0;
+  border: 1px solid $white;
+  color: $white;
+  background-color: #404040;
+  font-weight: 600;
+}
+
+.buy-btn:hover {
+  border: 1px solid $light-gray;
+  background-color: #7a7a7a;
+  text-decoration: none;
+}
+
+.dropdown-toggle {
+  border-radius: 0;
+}
+
+.nav-item a {
+  color: #404040;
+}
+
+.nav-item a:hover {
+  color: #7a7a7a;
+}

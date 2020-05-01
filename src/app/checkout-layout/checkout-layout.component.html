@@ -1,0 +1,305 @@
+<app-navigation></app-navigation>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+      <div class="accordion" id="accordionExample">
+
+        <!-- Shipping Information -->
+
+        <div class="card">
+          <button class="btn btn-link collapsed card-header text-left" id="headingOne" type="button"
+            data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <p class="m-0 p-0">Shipping information</p>
+          </button>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="form-group row">
+                <div class="form-group col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"> </i></span>
+                    <input type="text" class="form-control inputpadding" value="{{ user.firstname }}" placeholder="Firstname..." id="firstname"
+                      type="text">
+                    <!-- [ngClass]="{ 'has-error' : isSubmitted && formControls.firstname.errors }" class="validate">
+                        <span class="helper-text">
+                          <div *ngIf="isSubmitted && formControls.firstname.errors" class="text-danger">
+                            <div *ngIf="formControls.firstname.errors.required">
+                              First name address is required!
+                            </div>
+                          </div>
+                        </span> -->
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"> </i></span>
+                    <input type="text" value="{{ user.lastname }}" class="form-control inputpadding" placeholder="Lastname..." id="lastname"
+                      type="text">
+                    <!-- [ngClass]="{ 'has-error' : isSubmitted && formControls.lastname.errors }" class="validate">
+                        <span class="helper-text">
+                          <div *ngIf="isSubmitted && formControls.lastname.errors" class="text-danger">
+                          <div *ngIf="formControls.lastname.errors.required">
+                            Last name address is required!
+                          </div>
+                          </div>
+                        </span> -->
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="form-group col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-map-marker-alt"> </i></span>
+                    <input type="text" value="{{ user.addressline }}" class="form-control inputpadding" placeholder="Addressline..." id="addressline"
+                      type="text">
+                    <!-- [ngClass]="{ 'has-error' : isSubmitted && formControls.addressline.errors }" class="validate">
+                        <span class="helper-text">
+                          <div *ngIf="isSubmitted && formControls.addressline.errors" class="text-danger">
+                          <div *ngIf="formControls.firstname.errors.required">
+                            Address is required!
+                          </div>
+                          </div>
+                        </span> -->
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-map-marker-alt"> </i></span>
+                    <input type="text" value="{{ user.zipcode }}" class="form-control inputpadding" placeholder="Zipcode..." id="zipcode"
+                      type="text">
+                    <!-- [ngClass]="{ 'has-error' : isSubmitted && formControls.zipcode.errors }" class="validate">
+                        <span class="helper-text">
+                          <div *ngIf="isSubmitted && formControls.zipcode.errors" class="text-danger">
+                          <div *ngIf="formControls.zipcode.errors.required">
+                            zipcode is required!
+                          </div>
+                          </div>
+                        </span> -->
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="form-group col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-map-marker-alt"> </i></span>
+                    <input type="text" value="{{ user.city }}" class="form-control inputpadding" placeholder="City..." id="city" type="text">
+                    <!-- [ngClass]="{ 'has-error' : isSubmitted && formControls.city.errors }" class="validate">
+                        <span class="helper-text">
+                          <div *ngIf="isSubmitted && formControls.city.errors" class="text-danger">
+                          <div *ngIf="formControls.city.errors.required">
+                            City is required!
+                          </div>
+                          </div>
+                        </span> -->
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-map-marker-alt"> </i></span>
+                    <input type="text" value="{{ user.country }}" class="form-control inputpadding" placeholder="Country..." id="country"
+                      type="text">
+                    <!-- [ngClass]="{ 'has-error' : isSubmitted && formControls.country.errors }" class="validate">
+                        <span class="helper-text">
+                          <div *ngIf="isSubmitted && formControls.country.errors" class="text-danger">
+                          <div *ngIf="formControls.country.errors.required">
+                            Country is required!
+                          </div>
+                          </div>
+                        </span> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipping Method -->
+
+          <div class="card">
+            <button class="btn btn-link collapsed card-header text-left" id="headingTwo" type="button"
+              data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <p class="m-0 p-0">Shipping method</p>
+            </button>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body ">
+                <div class="checkout-information">
+                  <div class="paymentCont">
+                    <div class="headingWrap">
+                      <h3 class="headingTop text-center mb-4">Select your shipping method</h3>
+                    </div>
+                    <div class="paymentWrap">
+                      <div class="paymentBtnGroup btn-group-justified" data-toggle="buttons">
+                        <div class="row align-items-center checkout-border ">
+                          <div class="col border-right">
+                            <label class="btn paymentMethod active">
+                              <div class="method postnord"></div>
+                              <input type="radio" name="options" checked>
+                            </label>
+                          </div>
+                          <div class="col d-flex justify-content-center">
+                            <label for="">2 - 5 days delivery (+ $4)</label>
+                          </div>
+                        </div>
+                        <div class="row align-items-center checkout-border">
+                          <div class="col border-right">
+                            <label class="btn paymentMethod">
+                              <div class="method dhl"></div>
+                              <input type="radio" name="options">
+                            </label>
+                          </div>
+                          <div class="col d-flex justify-content-center">
+                            <label for="">1 - 2 days delivery (+ $10)</label>
+                          </div>
+                        </div>
+                        <div class="row align-items-center">
+                          <div class="col border-right">
+                            <label class="btn paymentMethod">
+                              <div class="method fedex"></div>
+                              <input type="radio" name="options">
+                            </label>
+                          </div>
+                          <div class="col d-flex justify-content-center">
+                            <label for="">1 - 2 days delivery (+ $10)</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="row shipping-border">
+                  <div class="col d-flex justify-content-center align-items-center">
+                     <img src="../../assets/postnord_logo.png" alt="">
+                  </div>
+                  <div class="col d-flex justify-content-center align-items-center">
+                    <input type="radio" name="postnord">
+                    <label for="">1 - 2 days express delivery (+$4)</label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center shipping-border">
+                  <img src="../../assets/dhl-logo.jpg" alt="" style="float:left;">
+                  <input class="m-0 p-0" type="radio" name="postnord">
+                  <label for="">1 - 2 delivery</label>
+
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment -->
+
+          <div class="card">
+            <button class="btn btn-link collapsed card-header text-left" id="headingThree" type="button"
+              data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <p class="m-0 p-0">Payment</p>
+            </button>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <div class="checkout-information">
+                  <div class="paymentCont">
+                    <div class="headingWrap">
+                      <h3 class="headingTop text-center mb-4">Select your payment method</h3>
+                    </div>
+                    <div class="paymentWrap">
+                      <div class="paymentBtnGroup btn-group-justified" data-toggle="buttons">
+                        <div class="row align-items-center checkout-border ">
+                          <div class="col border-right">
+                            <label class="btn paymentMethod active">
+                              <div class="method mastercard"></div>
+                              <input type="radio" name="options" checked>
+                            </label>
+                          </div>
+                          <div class="col d-flex justify-content-center">
+                            <label for="">Pay with Mastercard.</label>
+                          </div>
+                        </div>
+                        <div class="row align-items-center checkout-border">
+                          <div class="col border-right">
+                            <label class="btn paymentMethod">
+                              <div class="method paypal"></div>
+                              <input type="radio" name="options">
+                            </label>
+                          </div>
+                          <div class="col d-flex justify-content-center">
+                            <label for="">Pay with Paypal.</label>
+                          </div>
+                        </div>
+                        <div class="row align-items-center">
+                          <div class="col border-right">
+                            <label class="btn paymentMethod">
+                              <div class="method swish"></div>
+                              <input type="radio" name="options">
+                            </label>
+                          </div>
+                          <div class="col d-flex justify-content-center">
+                            <label for="">Pay with Swish.</label>
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   <!--  <div class="col-12 col-md-12 col-lg-5 ">
+      <div class="order-info border">
+        <div class="order-info-header">
+          <h2>Order information</h2>
+        </div>
+
+        <div class="order-info2">
+          <div class="row text-center product-info">
+            <div class="col"><strong>Product</strong></div>
+            <div class="col"><strong>Product name</strong></div>
+            <div class="col"><strong>Product price</strong></div>
+          </div>
+          <div class="row columns-info">
+            <div class="col"><img src="../../assets/iphone-11-pro-max-midnight-green-select-2019.png" alt=""></div>
+            <div class="col">iPhone 11 Pro Max Midnight Green</div>
+            <div class="col">$1099</div>
+          </div>
+          <button style="width: 100px; float: right;" class="buy-btn btn btn-primary" routerLink="/success-site"
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Purchase</button>
+        </div>
+      </div>
+    </div> -->
+    <div class="col-12 col-md-12 col-lg-5">
+        <div class="d-flex justify-content-center h-100">
+          <div class="order-info-margin">
+            <div class="order-info-header text-center ">
+              <h3>Order Information</h3>
+            </div>
+            <div class="card-body">
+                <div class="order-info2">
+                    <div class="row text-center product-info">
+                      <div class="col-4"><strong>Product</strong></div>
+                      <div class="col-4"><strong>Quantity</strong></div>
+                      <div class="col-4"><strong>Price</strong></div>
+                    </div>
+                    <div *ngFor="let item of items" class="row columns-info border-bottom">
+                      <div class="col">{{ item.product.name }}</div>
+                      <div class="col">{{ item.quantity }}</div>
+                      <div class="col">${{ item.product.price }}</div>
+                      
+                    </div>
+                    <div class="row">
+                      <strong class="col-6 mr-auto d-inline mt-4">Total: $ {{total}}</strong>
+                    
+                        <button class="col-6 d-inline buy-btn btn btn-primary mt-3" routerLink="/success-site"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Purchase</button>
+                    </div>
+                    
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="footermargin">
+    <app-footer></app-footer>
+</div>

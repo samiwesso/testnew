@@ -1,0 +1,119 @@
+.products {
+    margin-top: 100px;
+  }
+  
+  .demo {
+    padding: 45px 0;
+  }
+  
+  .product-grid2 {
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+  }
+  
+  .product-grid2 .product-image2 {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .product-grid2 .product-image2 a {
+    display: block;
+  }
+  
+  .product-grid2 .product-image2 img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-image2 .pic-1 {
+    opacity: 1;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  
+  .product-grid2:hover .add-to-cart {
+    bottom: 0;
+  }
+  
+  .product-grid2 .product-new-label {
+    background-color: #5a5a5a;
+    color: #fff;
+    font-size: 17px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  
+  .product-grid2:hover .product-new-label {
+    opacity: 0;
+  }
+  
+  .product-grid2 .product-content {
+    padding: 20px 10px;
+    text-align: center;
+  }
+  
+  .product-grid2 .title {
+    font-size: 17px;
+    margin: 0 0 7px;
+  }
+  
+  .product-grid2 .title a {
+    color: #303030;
+  }
+  
+  .product-grid2 .title a:hover {
+    color: #5a5a5a;
+  }
+  
+  .product-grid2 .price {
+    color: #303030;
+    font-size: 15px;
+  }
+  
+  @media (max-width: 575.98px) {
+    .product-grid2 .add-to-cart {
+      color: #fff;
+      background-color: #404040;
+      font-size: 15px;
+      text-align: center;
+      width: 100%;
+      padding: 10px 0;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 990px) {
+    .product-grid2 {
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (min-width: 991.98px) {
+    .product-grid2 .add-to-cart {
+      color: #fff;
+      background-color: #404040;
+      font-size: 15px;
+      text-align: center;
+      width: 100%;
+      padding: 10px 0;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -100%;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      -webkit-transition-timing-function: ease-out;
+              transition-timing-function: ease-out;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    .product-grid2 .add-to-cart:hover {
+      background-color: #7a7a7a;
+      text-decoration: none;
+    }
+  }
+  /*# sourceMappingURL=products.component.css.map */
