@@ -13,6 +13,7 @@ import { SuccessSiteComponent } from './success-site/success-site.component';
 import { CheckoutLayoutComponent } from './checkout-layout/checkout-layout.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductCartComponent } from './product-cart/product-cart.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home',  },
@@ -22,7 +23,7 @@ const routes: Routes = [
   { path: 'product-info', component: ProductInfoComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'about', component: AboutComponent },
- // { path: 'product', component: ProductComponent },
+  { path: 'product-cart', component: ProductCartComponent },
   { path: 'cart', component: ShoppingCartComponent},
   { path: 'login', component: LoginComponent},
   { path: 'profile', component: ProfileComponent },

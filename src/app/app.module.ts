@@ -25,7 +25,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CheckoutLayoutComponent } from './checkout-layout/checkout-layout.component';
 import { CookieService} from 'ngx-cookie-service';
 import { LogoutComponent } from './logout/logout.component';
-import { ProductListComponent } from './product-list/product-list.component'
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductCartComponent } from './product-cart/product-cart.component'
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ProductListComponent } from './product-list/product-list.component'
     RegisterComponent,
     CheckoutLayoutComponent,
     LogoutComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductCartComponent
   ],
   imports: [
     BrowserAnimationsModule,

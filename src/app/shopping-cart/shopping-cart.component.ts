@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output,OnInit, EventEmitter  } from '@angular/core';
+
 import { ProductService } from '../product.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -16,9 +17,18 @@ export class ShoppingCartComponent implements OnInit {
   private items: Item[] = [];
   private total: number = 0;
   private itemQuantity: number = 0;
-  private numTotal: number = 0;
 
   constructor(private activatedRoute: ActivatedRoute, private productService: ProductService ) { }
+
+
+ // @Input() products: any[];
+  @Output() productRemoved = new EventEmitter();
+  calcTotal() {
+    return this.items.reduce((acc, item) => acc+= item.quantity ,0)
+  }
+  removeProduct(item) {
+    this.productRemoved.emit(item)
+  }
 
   ngOnInit() {
 
@@ -68,7 +78,6 @@ export class ShoppingCartComponent implements OnInit {
     this.itemQuantity = 0;
     this.total = 0;
     this.items = [];
-    this.numTotal= 0;
     let cart = JSON.parse(localStorage.getItem('cart'));
     for (var i = 0; i < cart.length; i++) {
       let item = JSON.parse(cart[i]);
@@ -78,7 +87,6 @@ export class ShoppingCartComponent implements OnInit {
       });
       this.total += item.product.price * item.quantity;
       this.itemQuantity += item.quantity;
-      this.numTotal += item.quantity;
     }
   }
 

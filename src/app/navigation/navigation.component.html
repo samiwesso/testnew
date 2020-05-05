@@ -69,11 +69,7 @@
         <a class="hover-color nav-link" routerLink="/about" routerLinkActive="active"
           [routerLinkActiveOptions]="{exact: true}">ABOUT</a>
       </li>
-      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="hover-color nav-link" routerLink="/cart" routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact: true}">shopping</a>
-      </li>
-      
+          
     </ul>
     <ul class="navbar-nav my-2 my-lg-0">
       <li class="nav-item mr-sm-2 nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
@@ -84,15 +80,11 @@
         <a class="hover-color nav-link my-2 my-sm-0" routerLink="/register" routerLinkActive="active"
           [routerLinkActiveOptions]="{exact: true}">REGISTER</a>
       </li>
-      <li class="nav-item mr-sm-2 nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="hover-color nav-link" routerLink="/cart" routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact: true}"><i class="fas fa-shopping-cart"></i></a>
-          <strong class="itemQuantity text-center">      
-            <td data-th="Quantity">
-              <input type="number" class="form-control text-center" value="{{ itemQuantity }}" />
-            </td>
-                  </strong>
-      </li>
+            <li class="nav-item mr-sm-2 nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+      <a class="hover-color nav-link" routerLink="/cart" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"><i class="fas fa-shopping-cart"></i></a>
+        <strong class="itemQuantity text-center">{{itemQuantity}}</strong>
+    </li>
     </ul>
 
 </ng-template>
